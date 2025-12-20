@@ -9,9 +9,9 @@ name = "ray"
 
 def mine(prefix: str):
     """寻找满足哈希前缀的 nonce。"""
-    start = time.time()
-    n = 0
-    while True:
+start = time.time()
+n = 0
+while True:
         msg = f"{name}{n}".encode()
         h = hashlib.sha256(msg).hexdigest()
         if h.startswith(prefix):
